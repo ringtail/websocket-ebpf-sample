@@ -1,0 +1,17 @@
+{
+  "name": "websocket-server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "ws-server.js",
+  "dependencies": {
+    "ws": "^8.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ws-server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
