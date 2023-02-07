@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -x
 
 if [ -z "$PORT" ]
@@ -22,7 +22,7 @@ next_time=$(expr $(nowInMs) + $TIMEOUT);
 while [ 1 ]; do 
   count=$(netstat -anp | grep -i "$PORT"  | grep ESTABLISHED | wc -l)
   if [[ $count -le 0 ]];then
-    if [ $(nowInMs) -le $next_time ]; then 
+    if [[ $(nowInMs) -le $next_time ]]; then 
        echo $count > count.out;
        next_time=$(expr $(nowInMs) + $TIMEOUT);
     fi 

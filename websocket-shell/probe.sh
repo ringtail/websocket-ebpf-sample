@@ -1,9 +1,9 @@
-#!/bin/sh 
+#!/bin/bash
 
-if [  -f "count.out" ]; then
+if [[  -f "count.out" ]]; then
   count=$(cat count.out)
   if [[ $count -eq 0 ]]; then 
-     return 0;
+     exit 0;
   fi 
 fi 
 exit -1;
