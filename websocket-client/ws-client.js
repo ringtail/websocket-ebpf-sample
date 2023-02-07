@@ -11,15 +11,7 @@ const ws = new WebSocket(conn);
 ws.on('error', console.error);
 
 ws.on('open', function open() {
-  const array = new Float32Array(5);
-
-  var t = Math.random()*60*1000*10;
-
-  setTimeout(function() {
-    for (var i = 0; i < array.length; ++i) {
-      array[i] = i / 2;
-     }
-    ws.send(array);
-    ws.close();
-  }, t);
+  setInterval(function timeout() {
+    ws.send(Date.now());
+  }, 500);
 });
